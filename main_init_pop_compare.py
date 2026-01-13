@@ -19,18 +19,21 @@ from oblesa_ext import oblesa_ext, latin_hypercube_samples, sobol_samples
 SUITE_NAME = "bbob"
 
 # NOTE: Suite(name, instance, options)
-SUITE_INSTANCE = "instances: 1-3"      # change this if you want more/fewer instances
-SUITE_OPTIONS  = "dimensions: 2,5,10,20,40"      # fix the dimension to compare “like with like” 20, 40
+# SUITE_INSTANCE = "instances: 1-3"      # change this if you want more/fewer instances
+# SUITE_OPTIONS  = "dimensions: 2,5,10,20,40"      # fix the dimension to compare “like with like” 20, 40
+SUITE_INSTANCE = "instances: 1"      # change this if you want more/fewer instances
+SUITE_OPTIONS  = "dimensions: 2"      # fix the dimension to compare “like with like” 20, 40
 
-N_POP = 64          # population size 64, 128, 256
+N_POP = 256          # population size 64, 128, 256.
 # SEEDS = [3, 5, 7, 11, 13, 17, 42]
-SEEDS = [5, 7, 42]
+# SEEDS = [5, 7, 42]
+SEEDS = [42]
 N_REPS = len(SEEDS)
 
 OPT_N_ITER = 3000 # 3000
 TOL = 10e-8
 
-N_JOBS = 1
+N_JOBS = 1 #  Test single 1 core first
 
 INIT_METHODS = [
     "random",
@@ -45,10 +48,10 @@ INIT_METHODS = [
 
 OPT_METHODS = [
     "ga",
-    "de",
-    "pso",
-    "gwo",
-    "egwo"
+    # "de",
+    # "pso",
+    # "gwo",
+    # "egwo"
 ]
 
 # =========================
